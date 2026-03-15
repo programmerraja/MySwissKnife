@@ -113,6 +113,9 @@ echo "Running transcription..."
 faster-whisper "$AUDIO" \
 --device cpu \
 --compute_type int8 \
+--beam_size 1 \
+--best_of 1 \
+--no_timestamps \
 -o "$TRANSCRIPT"
 
 
